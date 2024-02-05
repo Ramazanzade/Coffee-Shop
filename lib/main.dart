@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: Splaspage()),
+      home: SafeArea(child: Scaffold(body: Splaspage())),
     );
   }
 }

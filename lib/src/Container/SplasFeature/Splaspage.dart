@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
-// import '../../../src/assets/imge/im.svg';
-const String assetsonbor = '../../../src/assets/imge/im.svg';
 
 class Splaspage extends StatefulWidget {
-  const Splaspage({super.key});
+  const Splaspage({Key? key}) : super(key: key);
 
   @override
   State<Splaspage> createState() => _SplaspageState();
@@ -14,19 +10,44 @@ class Splaspage extends StatefulWidget {
 class _SplaspageState extends State<Splaspage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Column(
-          children: [
-            SvgPicture.asset(
-              assetsonbor,
-              width: 200,
-              height: 600,
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Column(
+        children: [
+          Container(
+            width: width,
+            height: height / 1.7,
+            child: Image.asset(
+              'lib/src/assets/imge/i.png',
+              width: double.infinity,
+              height: double.infinity,
+              fit: BoxFit.cover,
             ),
-            const Text('salam'),
-          ],
-        ),
+          ),
+          Container(
+            width: width - 100,
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Coffee so good, your taste buds will love it.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                    ),
+                    textAlign: TextAlign.center),
+                Text('The best grain, the finest roast, the powerful flavor.',
+                    style: TextStyle(
+                      color: Color(0xFFA9A9A9),
+                      fontSize: 17,
+                    ),
+                    textAlign: TextAlign.center)
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
