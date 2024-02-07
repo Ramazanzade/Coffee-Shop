@@ -43,7 +43,19 @@ class _SplaspageState extends State<Splaspage> {
                       color: Color(0xFFA9A9A9),
                       fontSize: 17,
                     ),
-                    textAlign: TextAlign.center)
+                    textAlign: TextAlign.center),
+                Text('The best grain, the finest roast, the powerful flavor.',
+                    style: TextStyle(
+                      color: Color(0xFFA9A9A9),
+                      fontSize: 17,
+                    ),
+                    textAlign: TextAlign.center),
+                Text('The best grain, the finest roast, the powerful flavor.',
+                    style: TextStyle(
+                      color: Color(0xFFA9A9A9),
+                      fontSize: 17,
+                    ),
+                    textAlign: TextAlign.center),
               ],
             ),
           )
