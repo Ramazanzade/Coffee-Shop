@@ -29,33 +29,39 @@ class _SplaspageState extends State<Splaspage> {
           ),
           Container(
             width: width - 100,
-            child: const Column(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Coffee so good, your taste buds will love it.',
+                const Text('Coffee so good, your taste buds will love it.',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
                     ),
                     textAlign: TextAlign.center),
-                Text('The best grain, the finest roast, the powerful flavor.',
-                    style: TextStyle(
-                      color: Color(0xFFA9A9A9),
-                      fontSize: 17,
+                Padding(
+                  padding: EdgeInsets.only(bottom: 0.05 * height),
+                  child: const Text(
+                      'The best grain, the finest roast, the powerful flavor.',
+                      style: TextStyle(
+                        color: Color(0xFFA9A9A9),
+                        fontSize: 17,
+                      ),
+                      textAlign: TextAlign.center),
+                ),
+                SizedBox(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color.fromRGBO(198, 124, 78, 1),
+                      onPrimary: const Color.fromRGBO(255, 255, 255, 1),
+                      minimumSize: Size(width, 60),
+                      textStyle: const TextStyle(
+                        fontSize: 20,
+                      ),
                     ),
-                    textAlign: TextAlign.center),
-                Text('The best grain, the finest roast, the powerful flavor.',
-                    style: TextStyle(
-                      color: Color(0xFFA9A9A9),
-                      fontSize: 17,
-                    ),
-                    textAlign: TextAlign.center),
-                Text('The best grain, the finest roast, the powerful flavor.',
-                    style: TextStyle(
-                      color: Color(0xFFA9A9A9),
-                      fontSize: 17,
-                    ),
-                    textAlign: TextAlign.center),
+                    onPressed: () {},
+                    child: const Text('Get Started'),
+                  ),
+                ),
               ],
             ),
           )
