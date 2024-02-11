@@ -1,3 +1,4 @@
+import 'package:app/src/Container/HomeFeature/Homepage.dart';
 import 'package:flutter/material.dart';
 
 class Splaspage extends StatefulWidget {
@@ -58,7 +59,13 @@ class _SplaspageState extends State<Splaspage> {
                         fontSize: 20,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()),
+                      );
+                    },
                     child: const Text('Get Started'),
                   ),
                 ),
