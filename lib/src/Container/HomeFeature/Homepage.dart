@@ -1,3 +1,4 @@
+import 'package:app/src/Widget/HomeHeadre.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,8 +13,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    return const Scaffold(
-      body: Text('salam'),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+          child: Scaffold(
+        body: Column(children: [HomeHeadre()]),
+      )),
     );
   }
 }
